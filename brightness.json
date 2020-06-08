@@ -1,0 +1,42 @@
+{
+    "title": "Brightness control for logi",
+    "rules": [
+        {
+            "description": "brightness",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "delete_forward",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "apple_top_case_display_brightness_increment"
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "delete_or_backspace",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "apple_top_case_display_brightness_decrement"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

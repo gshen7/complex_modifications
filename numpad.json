@@ -1,0 +1,229 @@
+{
+  "title": "Numeric Keypad",
+  "rules": [
+    {
+      "description": "Numeric Keypad Trigger [Left alt caps Lock trigger key]",
+      "manipulators": [
+        {
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "numeric_keypad_mode",
+              "value": 1
+            }
+          ],
+          "type": "basic",
+          "from": {
+            "key_code": "caps_lock",
+            "modifiers": {
+              "mandatory": [
+                "left_alt"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "numeric_keypad_mode",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "numeric_keypad_mode",
+              "value": 0
+            }
+          ],
+          "type": "basic",
+          "from": {
+            "key_code": "caps_lock",
+            "modifiers": {
+              "mandatory": [
+                "left_alt"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "numeric_keypad_mode",
+                "value": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Numeric Keypad Mode",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "u"
+          },
+          "to": [
+            {
+              "key_code": "4"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "numeric_keypad_mode",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "i"
+          },
+          "to": [
+            {
+              "key_code": "5"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "numeric_keypad_mode",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "o"
+          },
+          "to": [
+            {
+              "key_code": "6"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "numeric_keypad_mode",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j"
+          },
+          "to": [
+            {
+              "key_code": "1"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "numeric_keypad_mode",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "k"
+          },
+          "to": [
+            {
+              "key_code": "2"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "numeric_keypad_mode",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "l"
+          },
+          "to": [
+            {
+              "key_code": "3"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "numeric_keypad_mode",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "spacebar"
+          },
+          "to": [
+            {
+              "key_code": "return_or_enter"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "numeric_keypad_mode",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "comma"
+          },
+          "to": [
+            {
+              "key_code": "0"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "numeric_keypad_mode",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "m"
+          },
+          "to": [
+            {
+              "key_code": "keypad_plus"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "numeric_keypad_mode",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
