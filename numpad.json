@@ -2,7 +2,7 @@
   "title": "Numeric Keypad",
   "rules": [
     {
-      "description": "Numeric Keypad Trigger [Left alt caps Lock trigger key]",
+      "description": "Numeric Keypad Trigger [Left control caps Lock trigger key]",
       "manipulators": [
         {
           "conditions": [
@@ -17,7 +17,7 @@
             "key_code": "caps_lock",
             "modifiers": {
               "mandatory": [
-                "left_alt"
+                "left_control"
               ]
             }
           },
@@ -43,7 +43,7 @@
             "key_code": "caps_lock",
             "modifiers": {
               "mandatory": [
-                "left_alt"
+                "left_control"
               ]
             }
           },
